@@ -2,6 +2,7 @@
 
 A responsive web application that allows users to register student information through an accessible form and dynamically generates profile cards with synchronized table data management.
 
+
 ## Features
 
 - **Accessible Registration Form** - Semantic HTML with proper labels and ARIA support
@@ -11,34 +12,39 @@ A responsive web application that allows users to register student information t
 - **Basic CRUD Operations** - Add and remove student profiles with corresponding table etries
 - **Responsive Design** - Mobile-friendly layout with proper color contrast
 
-## Technologies Used
+
+### Technologies Used
 
 - HTML5 (Semantic markup)
 - CSS3 (Responsive desgin)
 - JavaScript(DOM manipluation)
 - Git version control
 
-## Form Fields
+
+### Form Fields
 
 - First Name / Last Name
 - Email (with validation)
 - Programme of Study
 - Interests
 - Photo URL
+
  
-## Accessibility Features
+### Accessibility Features
 
 - Proper form lables and ARIA attributes
 - Keyboard navigation support
 - Live regions for screen reader feedback
 - High Contrast design
 - Semantic HTML structure
+
    
 ## Getting started
 
 1. Clone the repository
 2. Open 'student-registration.hyml' in your browser
 3. No additional setup required - runs locally
+
    
 ## Assignment Context
 
