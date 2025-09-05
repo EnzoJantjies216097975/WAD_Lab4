@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+</head>
+<body>
+    <header>
+        <h1>Student Registration System</h1>
+        <p>Complete the form below to add a new student profile</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Student Registration Form</h2>
+
+            <form id="regForm" novalidate>
+                <div class="form-group">
+                    <label for="firstName"> First Name <span aria-hidden="true" class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required aria-describedby="err-firstName">
+                    <small class="error" id="err-firstName" role="alert"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName"> Last Name <span aria-hidden="true" class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required aria-describedby="err-lastName">
+                    <small class="error" id="err-lastName" role="alert"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"> Email <span aria-hidden="true" class="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-describedby="err-email">
+                    <small class="error" id="err-email" role="alert"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="programme">Program of Sturdy <span aria-hidden="true" class="required">*</span></label>
+                    <select id="programme" name="programme" required aria-describedby="err-programme">
+                        <option value="">Select a programme</option>
+                        <option value="Foundation in Filmmaking">Foundation in Filmmaking</option>
+                        <option value="3D Animation">3D Animation</option>
+                        <option value="2D Animation">2D Animation</option>
+                        <option value="Scriptwriting for Film">Scriptwriting for Film</option>
+                        <option value="Scriptwriting for Childrens TV">Scriptwriting for Childrens TV</option>
+                        <option value="Bachelor of Computer Science (Systems Administration, Communication Networks or Software Development)">Bachelor of Computer Science (Systems Administration, Communication Networks or Software Development)</option>
+                        <option value="Bachelor of Computer Science (Systems Administration or Communication Networks)">Bachelor of Computer Science (Systems Administration or Communication Networks)</option>
+                        <option value="Bachelor of Computer Science in Cyber Security">Bachelor of Computer Science in Cyber Security</option>
+                        <option value="Bachelor of Computer Science (Software Development)">Bachelor of Computer Science (Software Development)</option>
+                        <option value="Bachelor of Informatics">Bachelor of Informatics</option>
+                        <option value="Bachelor of Journalism and Media Technology">Bachelor of Journalism and Media Technology</option>
+                        <option value="Bachelor of Computer Science Honours (Communication Networks)">Bachelor of Computer Science Honours (Communication Networks)</option>
+                        <option value="Bachelor of Computer Science Honours in Digital Forensics">Bachelor of Computer Science Honours in Digital Forensics</option>
+                        <option value="Bachelor of Computer Science Honours in Information Security">Bachelor of Computer Science Honours in Information Security</option>
+                        <option value="Bachelor of Computer Science Honours (Software Development)">Bachelor of Computer Science Honours (Software Development)</option>
+                        <option value="Master of Computer Science (Communication Networks, Forensic Computing, Information Security, Software Development)">Master of Computer Science (Communication Networks, Forensic Computing, Information Security, Software Development)</option>
+                        <option value="Doctor of Philosophy in Computer Science (Communication Networks, Forensic Computing, Information Security, Software Development)">Doctor of Philosophy in Computer Science (Communication Networks, Forensic Computing, Information Security, Software Development)</option>
+                        <option value="Postgraduate Certificate in Informatics (Information Systems Audit)">Postgraduate Certificate in Informatics (Information Systems Audit) </option>
+                        <option value="Bachelor of Informatics Honours (Web Informatics)">Bachelor of Informatics Honours (Web Informatics)</option>
+                        <option value="Bachelor of Informatics Honours (Business Informatics)">Bachelor of Informatics Honours (Business Informatics)</option>
+                        <option value="Master of Data Science">Master of Data Science</option>
+                        <option value="Master of Informatics">Master of Informatics</option>
+                        <option value="Doctor of Philosophy in Informatics">Doctor of Philosophy in Informatics</option>
+                        <option value="Bachelor of Journalism and Media Technology Honours">Bachelor of Journalism and Media Technology Honours</option>
+                        <option value="Master of Journalism and Media Technology">Master of Journalism and Media Technology</option>
+                    </select>
+                    <small class="error" id="err-programme" role="alert"></small>
+                </div>
+                
+                <fieldset class="form-group">
+                    <legend>Year of Study <span aria-hidden="true" class="required">*</span></legend>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="Year" value="1" required>
+                            Year 1
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="Year" value="2">
+                            Year 2
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="Year" value="3">
+                            Year 3
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="Year" value="4">
+                            Year 4
+                        </label>
+                    </div>
+                    <small class="error" id="err-year" role="alert"></small>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="interests">Interests/Hobbies</label>
+                    <textarea id="interests" name="interests" rows="3" placeholder="Tell us about your interests and hobbies" aria-describedby="interests-help"></textarea>
+                    <small id="interests-help" class="help-text">Optional: Share your interests, hobbies or activities</small>
+                </div>"
+
+                <idv class="form-group">
+                    <label for="photoUrl">Photo Url</label>
+                    <input type="url" id="photoUrl" name="photoUrl" placeholder="Enter a URL for your photo" aria-describedby="photo-help">
+                    <small id="photo-help" class="help-text">Optional: Provide a URL to your profile photo</small>
+                </div>
+
+                <div aria-live="polite" class="sr-only" id="live" role="status"></div>
+                
+                <button type="submit" class="submit-btn">Add Student profile</button>                
+            </form>
+        </section>
+
+        <section class="cards-section">
+            <h2>Student Profiles</h2>
+            <div id="cards" class="cards-container">
+                <p class="no-profiles" id="noProfiles">No student profiles yet. Add one using the form above!</p>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h2>Students Summary</h2>
+            <div class="table-container">
+                <table id="summary" class="summary-table">
+                    <caption>Summary of all registered students</caption>
+                    <thread>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Programme</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NUST WAD621s Lab 4 - Student Registration System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
