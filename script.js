@@ -1,3 +1,12 @@
+/*
+I hereby acknowledge that the work handed in is my own original work. If I have quoted from any other source
+this information has been correctly referenced.  I also declare that I have read the Namibia University of Science
+and Technology Policies on Academic Honesty and Integrity as indicated in my course outline and the NUST general
+information and regulations - Yearbook 2025
+ 
+   @author <Enzo Jantjies> <216097975>
+*/
+
 let students = [];
 let nextId = 1;
 
@@ -43,7 +52,7 @@ function validateEmail(value) {
     return true;
 }
 
-// Validates the year selection
+// Validates the year is selected from radio buttons
 function validateYear() {
     const errorElement = document.getElementById('err-year');
     const yearRadios = document.querySelectorAll('input[name="year"]');
@@ -66,7 +75,7 @@ function validateProgramme(value) {
 }
 
 
-// Validates the entire form (returns "true" only if all validations pass)
+// Validates the entire form returns "true" only if all validations pass)
 // Making use of & instead of && to see all errors instead of just the first error
 function validateForm(formData) {
     let isValid = validateRequired(formData.firstName, 'err-firstName', 'First name');
@@ -98,6 +107,11 @@ function getFormData() {
     return data;
 }
 
+function createInitialsPlaceholder(firstName, lastName) {
+    const initials = (firstName.charAt(0) + lastName.charAt(0)).toUpperCase();
+    return `<div class="placeholder-avatar">${initials}</div>`;
+}
+
 // Create a profile carf element for a student and adds it to the DOM
 function createProfileCard(student) {
 
@@ -109,10 +123,12 @@ function createProfileCard(student) {
     // Build the card's HTML content
     card.innerHTML = `
         <div class="card-header">
-            <img src="${student.photoUrl || 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=no_photography'}" 
-                 alt="Profile photo of ${student.firstName} ${student.lastName}"
-                 class="profile-photo"
-                 onerror="this.src='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=no_photography'>
+          ${student.photoUrl ? 
+    `<img src="${student.photoUrl}" 
+         alt="Profile photo of ${student.firstName} ${student.lastName}"
+         class="profile-photo"
+         onerror="this.outerHTML='${createInitialsPlaceholder(student.firstName, student.lastName)}'">` :
+    createInitialsPlaceholder(student.firstName, student.lastName)}
             <div class="card-info">
                 <h3>${student.firstName} ${student.lastName}</h3>
                 <p class="email">${student.email}</p>

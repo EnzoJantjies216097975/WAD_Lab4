@@ -1,3 +1,12 @@
+/*
+I hereby acknowledge that the work handed in is my own original work. If I have quoted from any other source
+this information has been correctly referenced.  I also declare that I have read the Namibia University of Science
+and Technology Policies on Academic Honesty and Integrity as indicated in my course outline and the NUST general
+information and regulations - Yearbook 2025
+ 
+   @author <Enzo Jantjies> <216097975>
+*/
+
 :root{
     --primary-color: #2563eb;
     --primary-hover: #1d4ed8;
@@ -245,6 +254,21 @@ input[type="radio"] {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: var(--space-lg);
     margin-top: var(--space-lg);
+}
+
+.placeholder-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: var(--font-weight-semibold);
+    font-size: 24px;
+    border: 3px solid var(--bg-primary);
+    box-shadow: var(--shadow-sm);
 }
 
 .profile-card {
