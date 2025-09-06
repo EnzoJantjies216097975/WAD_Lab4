@@ -123,12 +123,12 @@ function createProfileCard(student) {
     // Build the card's HTML content
     card.innerHTML = `
         <div class="card-header">
-          ${student.photoUrl ? 
-    `<img src="${student.photoUrl}" 
-         alt="Profile photo of ${student.firstName} ${student.lastName}"
-         class="profile-photo"
-         onerror="this.outerHTML='${createInitialsPlaceholder(student.firstName, student.lastName)}'">` :
-    createInitialsPlaceholder(student.firstName, student.lastName)}
+          ${student.photoUrl ? `
+        <img src="${student.photoUrl}" 
+            alt="Profile photo of ${student.firstName} ${student.lastName}"
+            class="profile-photo"
+            onerror="this.outerHTML='${createInitialsPlaceholder(student.firstName, student.lastName)}'">` :
+            createInitialsPlaceholder(student.firstName, student.lastName)}
             <div class="card-info">
                 <h3>${student.firstName} ${student.lastName}</h3>
                 <p class="email">${student.email}</p>
