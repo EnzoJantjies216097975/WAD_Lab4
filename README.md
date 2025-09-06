@@ -9,7 +9,7 @@ A responsive web application that allows users to register student information t
 - **Real-time Validation** - Inline error messages and form validation using Javascript
 - **Dynamic Profile Crds** - Auto-generated profile cards for each student submission
 - **Synchronized Data - Table** - Summary table that updates in sync with profile cards
-- **Basic CRUD Operations** - Add and remove student profiles with corresponding table etries
+- **Basic CRUD Operations** - Add and remove student profiles with corresponding table entries
 - **Responsive Design** - Mobile-friendly layout with proper color contrast
 
 
